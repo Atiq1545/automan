@@ -1,0 +1,444 @@
+
+{{define "style_src"}}
+
+    <!-- select to -->
+    <link href="resources/css/select2.min.css" rel="stylesheet" />
+    <!-- font awesome -->
+    <link rel="stylesheet" href="resources/css/fontawesome.min.css">
+    <link rel="stylesheet" href="resources/css/all.min.css">
+    <link rel="stylesheet" href="resources/css/owl.carousel.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="resources/css/bootstrap.min.css">
+    <link rel="stylesheet" href="resources/css/main.css">
+
+{{end}}
+
+{{define "banner"}}
+
+    <div class="carbanner">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 carbannertext service_banner">
+            <p>Run by a team of avid automobile enthusiasts, we, at Automan, treat your vehicle like any of our own. Here’s why we should be your next maintenance request call.</p>
+          </div>
+          <div class="col-sm-4">
+            <img src="resources/images/used-car.png" alt="" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+
+{{end}}
+
+{{define "custom"}}
+
+    {{block "home_service" .}}
+
+        <div class="service">
+            <div class="container">
+                <div class="row">
+                    <div class="col-2 service_title">
+                        <h2>Home Services</h2>
+                    </div>
+                    <div class="col-10">
+
+                        <div id="service_item" class="owl-carousel">
+                            <div class="service_item_item">
+                                <div class="card">
+                                <img src="resources/images/home-banner-testdrive.jpg" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Oil and Filter Change</h5>
+                                </div>
+                                </div>
+                            </div>
+
+                            <div class="service_item_item">
+                                <div class="card">
+                                <img src="resources/images/home-banner-30days.jpg" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Polish (exterior and interior)</h5>
+                                </div>
+                                </div>
+                            </div>
+
+                            <div class="service_item_item">
+                                <div class="card">
+                                <img src="resources/images/home-banner-certified.jpg" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Deep Cleaning (interior)</h5>
+                                </div>
+                                </div>
+                            </div>
+
+                            <div class="service_item_item">
+                                <div class="card">
+                                <img src="resources/images/home-banner-driveaway.jpg" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Health Check and Inspection Report</h5>
+                                </div>
+                                </div>
+                            </div>
+
+                            <div class="service_item_item">
+                                <div class="card">
+                                <img src="resources/images/home-banner-certified.jpg" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Others</h5>
+                                </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    {{end}}
+
+    {{block "home_service_package" .}}
+
+        <div class="service">
+            <div class="container">
+                <div class="row">
+                    <div class="col-2 service_title2">
+                        <h2>Home Service Packages</h2>
+                    </div>
+                    <div class="col-10">
+
+                        <div id="service_item2" class="owl-carousel">
+                            <div class="service_item_item">
+                                <div class="card">
+                                <img src="resources/images/home-banner-testdrive.jpg" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Foam & Pressure Wash</h5>
+                                </div>
+                                </div>
+                            </div>
+
+                            <div class="service_item_item">
+                                <div class="card">
+                                <img src="resources/images/home-banner-30days.jpg" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Vacuum Cleaning</h5>
+                                </div>
+                                </div>
+                            </div>
+
+                            <div class="service_item_item">
+                                <div class="card">
+                                <img src="resources/images/home-banner-certified.jpg" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Engine Oil & Filter Change</h5>
+                                </div>
+                                </div>
+                            </div>
+
+                            <div class="service_item_item">
+                                <div class="card">
+                                <img src="resources/images/home-banner-driveaway.jpg" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Interior/Exterior Polish</h5>
+                                </div>
+                                </div>
+                            </div>
+
+                            <div class="service_item_item">
+                                <div class="card">
+                                <img src="resources/images/home-banner-certified.jpg" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Vehicle Health Check & Inspection Report</h5>
+                                </div>
+                                </div>
+                            </div>
+
+                            <div class="service_item_item">
+                                <div class="card">
+                                <img src="resources/images/home-banner-driveaway.jpg" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Others</h5>
+                                </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    {{end}}
+
+    {{block "workshop_service" .}}
+
+        <div class="service">
+            <div class="container">
+                <div class="row">
+                    <div class="col-2 service_title3">
+                        <h2>Workshop Services</h2>
+                    </div>
+                    <div class="col-10">
+
+                        <div id="service_item3" class="owl-carousel">
+                            <div class="service_item_item">
+                                <div class="card">
+                                <img src="resources/images/home-banner-testdrive.jpg" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Dent-Paint</h5>
+                                </div>
+                                </div>
+                            </div>
+
+                            <div class="service_item_item">
+                                <div class="card">
+                                <img src="resources/images/home-banner-30days.jpg" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Aircon Checkup</h5>
+                                </div>
+                                </div>
+                            </div>
+
+                            <div class="service_item_item">
+                                <div class="card">
+                                <img src="resources/images/home-banner-certified.jpg" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Engine Work</h5>
+                                </div>
+                                </div>
+                            </div>
+
+                            <div class="service_item_item">
+                                <div class="card">
+                                <img src="resources/images/home-banner-driveaway.jpg" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Exhaust System Work</h5>
+                                </div>
+                                </div>
+                            </div>
+
+                            <div class="service_item_item">
+                                <div class="card">
+                                <img src="resources/images/home-banner-certified.jpg" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Steering System Work</h5>
+                                </div>
+                                </div>
+                            </div>
+
+                            <div class="service_item_item">
+                                <div class="card">
+                                <img src="resources/images/home-banner-certified.jpg" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Suspension System Work</h5>
+                                </div>
+                                </div>
+                            </div>
+
+                            <div class="service_item_item">
+                                <div class="card">
+                                <img src="resources/images/home-banner-certified.jpg" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Spare Parts Supply</h5>
+                                </div>
+                                </div>
+                            </div>
+
+                            <div class="service_item_item">
+                                <div class="card">
+                                <img src="resources/images/home-banner-certified.jpg" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Others</h5>
+                                </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    {{end}}
+
+    {{block "value_added_service" .}}
+
+        <div class="service">
+            <div class="container">
+                <div class="row">
+                    <div class="col-2 service_title4">
+                        <h2>Value Added Services</h2>
+                    </div>
+                    <div class="col-10">
+
+                        <div id="service_item4" class="owl-carousel">
+                            <div class="service_item_item">
+                                <div class="card">
+                                <img src="resources/images/home-banner-testdrive.jpg" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">CNG System Checkup</h5>
+                                </div>
+                                </div>
+                            </div>
+
+                            <div class="service_item_item">
+                                <div class="card">
+                                <img src="resources/images/home-banner-30days.jpg" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">LPG Conversion</h5>
+                                </div>
+                                </div>
+                            </div>
+
+                            <div class="service_item_item">
+                                <div class="card">
+                                <img src="resources/images/home-banner-certified.jpg" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Insurance</h5>
+                                </div>
+                                </div>
+                            </div>
+
+                            <div class="service_item_item">
+                                <div class="card">
+                                <img src="resources/images/home-banner-driveaway.jpg" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">GPS Tracking</h5>
+                                </div>
+                                </div>
+                            </div>
+
+                            <div class="service_item_item">
+                                <div class="card">
+                                <img src="resources/images/home-banner-certified.jpg" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Others</h5>
+                                </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    {{end}}
+
+{{end}}
+
+
+
+{{define "script"}}
+
+    <script>
+
+        // service slider
+        $(document).ready(function() {
+            $('#service_item').owlCarousel({
+                loop:true,
+                autoplaySpeed:2000,
+                margin:35,
+                nav:true,
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    600:{
+                        items:2
+                    },
+                    1000:{
+                        items:3
+                    }
+                },
+                navText: ["<img src='resources/images/av8a49a4f81c3318dc69d.png' class=''/>","<img src='resources/images/avcc910c4ee5888b858fe.png' class=''/>"]
+            });
+        });
+
+        $(document).ready(function() {
+            $('#service_item2').owlCarousel({
+                loop:true,
+                autoplaySpeed:2000,
+                margin:35,
+                nav:true,
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    600:{
+                        items:2
+                    },
+                    1000:{
+                        items:3
+                    }
+                },
+                navText: ["<img src='resources/images/av8a49a4f81c3318dc69d.png' class=''/>","<img src='resources/images/avcc910c4ee5888b858fe.png' class=''/>"]
+            });
+        });
+
+        $(document).ready(function() {
+            $('#service_item3').owlCarousel({
+                loop:true,
+                autoplaySpeed:2000,
+                margin:35,
+                nav:true,
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    600:{
+                        items:2
+                    },
+                    1000:{
+                        items:3
+                    }
+                },
+                navText: ["<img src='resources/images/av8a49a4f81c3318dc69d.png' class=''/>","<img src='resources/images/avcc910c4ee5888b858fe.png' class=''/>"]
+            });
+        });
+
+        $(document).ready(function() {
+            $('#service_item4').owlCarousel({
+                loop:true,
+                autoplaySpeed:2000,
+                margin:35,
+                nav:true,
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    600:{
+                        items:2
+                    },
+                    1000:{
+                        items:3
+                    }
+                },
+                navText: ["<img src='resources/images/av8a49a4f81c3318dc69d.png' class=''/>","<img src='resources/images/avcc910c4ee5888b858fe.png' class=''/>"]
+            });
+        });
+
+
+        function openNav3() {document.getElementById("mySidepanel3").style.width = "70%";}
+        function closeNav3() {document.getElementById("mySidepanel3").style.width = "0";}
+
+        // menu active
+        $(function(){
+            $('.menulist a').filter(function(){return this.href==location.href}).parent().addClass('menu-active').siblings().removeClass('menu-active')
+        });
+        
+        // add active class acordian
+        $(document).ready(function(){
+            $('.requestfaq .card-header').click(function(){
+            $('.card-header').removeClass("card-active");
+            $(this).addClass("card-active");
+            });
+        });
+
+    </script>
+
+
+{{end}}

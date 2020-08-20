@@ -1,0 +1,87 @@
+
+{{define "banner"}}
+
+    <section id="banner">
+        <div class="container text">
+	        <div class="row">
+	          <div class="col-sm-6">
+	            <div class="content">
+	              <h2>Need any further Information? How can we help you?</h2><br>
+	            </div>
+	          </div>
+	          <div class="clearfix"></div>
+	          <div class="col-sm-6">
+	            <img src="resources/images/imageedit_334_7919668249.png" alt="" class="img-fluid" width="400px">
+	          </div>
+	        </div>
+        </div>
+        </svg>
+    </section>
+
+{{end}}
+
+{{define "custom"}}
+
+    {{block "contact_form". }}
+
+        <div class="container">
+            <div class="contactformcontact shadow-lg">
+                <div class="row" style="margin-left: 0px;margin-right: 0px;">
+                
+                    <div class="col-sm-6 contactformcontacttext">
+                        <h2>Let's get started</h2>
+                        <p><b>Need any further Information? How can we help you? Please send us your query.</b></p>
+                    </div>
+                    <div class="col-sm-6 contactform-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control formdesigncontact" name="name" placeholder="Name" autocomplete="off" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control formdesigncontact" name="email" placeholder="Email" autocomplete="off" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control formdesigncontact" id="message" rows="6" placeholder="Write Message Here..." required></textarea>
+                        </div>
+                        <button type="submit" class="submitbtn float-right">Submit</button>
+                    </form>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="row" style="margin-bottom:50px;">
+                <div class="col-sm-4 contact_address">
+                    <div class="card shadow-lg contacticon">
+                    <div class="contactformicon"><i class="fas fa-home"></i></div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Address</h5>
+                        <p class="card-text">House-42, Road-1, Block-A, Niketan, Gulshan-1, Dhaka-1212, Bangladesh</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 contact_address">
+                    <div class="card shadow-lg contacticon">
+                    <div class="contactformicon"><i class="fas fa-phone"></i></div>
+                    <div class="card-body text-center contacticon_call">
+                        <h5 class="card-title">Hotline</h5>
+                        <p class="card-text">+88 01917 99 1111</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 contact_address">
+                    <div class="card shadow-lg contacticon">
+                    <div class="contactformicon"><i class="fas fa-envelope"></i></div>
+                    <div class="card-body text-center contacticon_mail">
+                        <h5 class="card-title">Email</h5>
+                        <p class="card-text">contact@automan.com</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    {{end}}
+
+{{end}}

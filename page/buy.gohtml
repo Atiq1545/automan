@@ -1,0 +1,1565 @@
+{{define "banner"}}
+
+    <div class="carbanner">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <img src="resources/images/used-car.png" alt="" class="img-fluid">
+          </div>
+          <div class="col-sm-8 carbannertext">
+            <p style="">Browse through our wide list of Automan certified pre owned cars. The road might be bumpy but the ride should not!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+{{end}}
+
+
+{{define "custom"}}
+
+    {{block "mobile_advance_search" .}}
+
+        <div class="container">
+            <!-- Mobile menu start -->
+            <div id="mobile-menu">
+                <div class="row">
+                <div class="col-8 mobile-search">
+                    <form class="" action="" method="">
+                        <select class="form-control select2">
+                        <option selected>Search Any Make - Any Model</option>
+                        <option value="1">Mazda Mazda3</option>
+                        <option value="2">Toyota Harrier</option>
+                        <option value="3">Honda Civic</option>
+                        <option value="3">Hyundai ELANTRA</option>
+                        <option value="3">Mazda Mazda5</option>
+                        <option value="3">BMW 216d</option>
+                        <option value="3">Toyota Wish</option>
+                        </select>
+                    </form>
+                </div>
+                <div class="col-2">
+                    <div style="float:right;"><a class="openbtn" onclick="openNav()"><i class="fas fa-filter"></i></a></div>
+                </div>
+                <div class="col-2 ">
+                    <div style="float:right;"><a class="openbtn" onclick="openNav2()"><i class="fas fa-sort-alpha-down"></i></a></div>
+                </div>
+                </div>
+
+                <div id="mySidepanel" class="sidepanel">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <div class="sidepanelcontent">
+
+                    <nav class="navbar navbar-light advserch1">
+                    <span>FILTER</span>
+                    <form class="form-inline">
+                        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Clear All</button>
+                    </form>
+                    </nav>
+
+                    <div class="accordion advserch2" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left btfocus" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <span class="float-left">PRICE RANGE</span> <span class="float-right"><i class="fas fa-angle-down"></i>&nbsp;</span>
+                            </button>
+                        </h2>
+                        </div>
+
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <div class="row">
+                            <div class="col-sm-6 col-6 serchfrom">
+
+                                <form>
+                                <div class="form-group">
+                                    <select id="inputState" class="form-control fromeffect">
+                                    <option selected>From</option>
+                                    <option>$0k</option>
+                                    <option>$20k</option>
+                                    <option>$40k</option>
+                                    <option>$60k</option>
+                                    <option>$80k</option>
+                                    <option>$100k</option>
+                                    </select>
+                                </div>
+                                </form>
+
+                            </div>
+
+                            <div class="col-sm-6 col-6 serchto">
+
+                                <form>
+                                <div class="form-group">
+                                    <select id="inputState" class="form-control fromeffect">
+                                    <option selected>To</option>
+                                    <option>$0k</option>
+                                    <option>$20k</option>
+                                    <option>$40k</option>
+                                    <option>$60k</option>
+                                    <option>$80k</option>
+                                    <option>$100k</option>
+                                    </select>
+                                </div>
+                                </form>
+
+                            </div>
+
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <hr>
+                    </div>
+
+                    <div class="accordion advserch2" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left btfocus" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                            <span class="float-left">DEPRECIATION RANGE</span> <span class="float-right"><i class="fas fa-angle-down"></i></span>
+                            </button>
+                        </h2>
+                        </div>
+
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <div class="row">
+                            <div class="col-sm-6 col-6 serchfrom">
+
+                                <form>
+                                <div class="form-group">
+                                    <select id="inputState" class="form-control fromeffect">
+                                    <option selected>From</option>
+                                    <option>$0k</option>
+                                    <option>$2k</option>
+                                    <option>$4k</option>
+                                    <option>$6k</option>
+                                    <option>$8k</option>
+                                    <option>$10k</option>
+                                    </select>
+                                </div>
+                                </form>
+
+                            </div>
+
+                            <div class="col-sm-6 col-6 serchto">
+
+                                <form>
+                                <div class="form-group">
+                                    <select id="inputState" class="form-control fromeffect">
+                                    <option selected>To</option>
+                                    <option>$0k</option>
+                                    <option>$2k</option>
+                                    <option>$4k</option>
+                                    <option>$6k</option>
+                                    <option>$8k</option>
+                                    <option>$10k</option>
+                                    </select>
+                                </div>
+                                </form>
+
+                            </div>
+
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <hr>
+                    </div>
+
+                    <!-- 3 -->
+
+                    <div class="accordion advserch2" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left btfocus" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                            <span class="float-left">REGISTRATION YEAR</span> <span class="float-right"><i class="fas fa-angle-down"></i></span>
+                            </button>
+                        </h2>
+                        </div>
+
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <div class="row">
+                            <div class="col-sm-6 col-6 serchfrom">
+
+                                <form>
+                                <div class="form-group">
+                                    <select id="inputState" class="form-control fromeffect">
+                                    <option selected>From</option>
+                                    <option>1980</option>
+                                    <option>2005</option>
+                                    <option>2006</option>
+                                    <option>2007</option>
+                                    <option>2008</option>
+                                    <option>2009</option>
+                                    <option>2010</option>
+                                    <option>2011</option>
+                                    </select>
+                                </div>
+                                </form>
+
+                            </div>
+
+                            <div class="col-sm-6 col-6 serchto">
+
+                                <form>
+                                <div class="form-group">
+                                    <select id="inputState" class="form-control fromeffect">
+                                    <option selected>To</option>
+                                    <option>2005</option>
+                                    <option>2006</option>
+                                    <option>2007</option>
+                                    <option>2008</option>
+                                    <option>2009</option>
+                                    <option>2010</option>
+                                    <option>2011</option>
+                                    </select>
+                                </div>
+                                </form>
+
+                            </div>
+
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <hr>
+                    </div>
+
+                    <!-- 4 -->
+
+                    <div class="accordion advserch2" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left btfocus" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                            <span class="float-left">MILEAGE</span> <span class="float-right"><i class="fas fa-angle-down"></i></span>
+                            </button>
+                        </h2>
+                        </div>
+
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <div class="row">
+                            <div class="col-sm-6 col-6 serchfrom">
+
+                                <form>
+                                <div class="form-group">
+                                    <select id="inputState" class="form-control fromeffect">
+                                    <option selected>From</option>
+                                    <option>0 km</option>
+                                    <option>10,000 km</option>
+                                    <option>20,000 km</option>
+                                    <option>30,000 km</option>
+                                    <option>40,000 km</option>
+                                    <option>50,000 km</option>
+                                    <option>60,000 km</option>
+                                    <option>70,000 km</option>
+                                    </select>
+                                </div>
+                                </form>
+
+                            </div>
+
+                            <div class="col-sm-6 col-6 serchto">
+
+                                <form>
+                                <div class="form-group">
+                                    <select id="inputState" class="form-control fromeffect">
+                                    <option selected>To</option>
+                                    <option>10,000 km</option>
+                                    <option>20,000 km</option>
+                                    <option>30,000 km</option>
+                                    <option>40,000 km</option>
+                                    <option>50,000 km</option>
+                                    <option>60,000 km</option>
+                                    <option>70,000 km</option>
+                                    </select>
+                                </div>
+                                </form>
+
+                            </div>
+
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <hr>
+                    </div>
+
+                    <!-- 5 -->
+
+                    <div class="accordion advserch2" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left btfocus" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                            <span class="float-left">OWNERS</span> <span class="float-right"><i class="fas fa-angle-down"></i></span>
+                            </button>
+                        </h2>
+                        </div>
+
+                        <div id="collapseFive" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="ownernumber">
+                            <button type="button" class="btn number-of-owner">1</button>
+                            <button type="button" class="btn number-of-owner">2</button>
+                            <button type="button" class="btn number-of-owner">3</button>
+                            <button type="button" class="btn number-of-owner">4</button>
+                            <button type="button" class="btn number-of-owner">5</button>
+                        </div>
+                        </div>
+                    </div>
+                    <hr>
+                    </div>
+
+                    <!-- 6 -->
+
+                    <div class="accordion advserch2" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left btfocus" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                            <span class="float-left">TRANSMISSION</span> <span class="float-right"><i class="fas fa-angle-down"></i></span>
+                            </button>
+                        </h2>
+                        </div>
+
+                        <div id="collapseSix" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="ownernumber">
+                            <button type="button" class="btn btn-automatic">Automatic</button>
+                        </div>
+                        </div>
+                    </div>
+                    <hr>
+                    </div>
+
+                    <!-- 7 -->
+
+                    <div class="accordion advserch2" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left btfocus" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+                            <span class="float-left">COE RENEWED</span> <span class="float-right"><i class="fas fa-angle-down"></i></span>
+                            </button>
+                        </h2>
+                        </div>
+
+                        <div id="collapseSeven" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="ownernumber">
+                            
+                        </div>
+                        </div>
+                    </div>
+                    <hr>
+                    </div>
+
+                    <!-- 8 -->
+
+                    <div class="accordion advserch2" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left btfocus" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="true" aria-controls="collapseEight">
+                            <span class="float-left">OFFPEAK CAR</span> <span class="float-right"><i class="fas fa-angle-down"></i></span>
+                            </button>
+                        </h2>
+                        </div>
+
+                        <div id="collapseEight" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="ownernumber">
+                            <button type="button" class="btn btn-automatic">Regular</button>
+                            <button type="button" class="btn btn-automatic">OPC</button>
+                        </div>
+                        </div>
+                    </div>
+                    <hr>
+                    </div>
+
+                    <!-- 9 -->
+
+                    <div class="accordion advserch2" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left btfocus" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="true" aria-controls="collapseNine">
+                            <span class="float-left">TAGS</span> <span class="float-right"><i class="fas fa-angle-down"></i></span>
+                            </button>
+                        </h2>
+                        </div>
+
+                        <div id="collapseNine" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="ownernumber">
+                            <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">Good Deal</label>
+                            </div>
+                            <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">Urgent Sale</label>
+                            </div>
+                            <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">Carro Selection</label>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <hr>
+                    </div>
+
+                    <!-- 10 -->
+
+                    <div class="accordion advserch2" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left btfocus" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="true" aria-controls="collapseNine">
+                            <span class="float-left">FUEL TYPE</span> <span class="float-right"><i class="fas fa-angle-down"></i></span>
+                            </button>
+                        </h2>
+                        </div>
+
+                        <div id="collapseNine" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="ownernumber">
+                            <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">Diesel</label>
+                            </div>
+                            <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">Petrol</label>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <hr>
+                    </div>
+
+                    <!-- 11 -->
+
+                    <div class="accordion advserch2" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left btfocus" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="true" aria-controls="collapseNine">
+                            <span class="float-left">BODY TYPE</span> <span class="float-right"><i class="fas fa-angle-down"></i></span>
+                            </button>
+                        </h2>
+                        </div>
+
+                        <div id="collapseNine" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="ownernumber">
+                            <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">Hatchback</label>
+                            </div>
+                            <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">Mid Sized Sedan</label>
+                            </div>
+                            <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">Mpv</label>
+                            </div>
+                            <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">Sports</label>
+                            </div>
+                            <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">Suv</label>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <hr>
+                    </div>
+
+                </div>
+                </div>
+
+                <div id="mySidepanel2" class="sidepanel">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">×</a>
+                <div class="sidepanelcontent">
+
+                    <form action="">
+
+                    <div class="form-check form-control" style="padding-left:30px;margin-bottom: 10px;">
+                        <input class="form-check-input" type="radio" name="latest" id="latest" value="option1" checked>
+                        <label class="form-check-label" for="latest">
+                        Latest
+                        </label>
+                    </div>
+                    <div class="form-check form-control" style="padding-left:30px;margin-bottom: 10px;">
+                        <input class="form-check-input" type="radio" name="low-price" id="low-price" value="option1" >
+                        <label class="form-check-label" for="low-price">
+                        Low Price
+                        </label>
+                    </div>
+                    <div class="form-check form-control" style="padding-left:30px;margin-bottom: 10px;">
+                        <input class="form-check-input" type="radio" name="high-price" id="high-price" value="option1" >
+                        <label class="form-check-label" for="high-price">
+                        High Price
+                        </label>
+                    </div>
+                    <div class="form-check form-control" style="padding-left:30px;margin-bottom: 10px;">
+                        <input class="form-check-input" type="radio" name="depreciation" id="depreciation" value="option1" >
+                        <label class="form-check-label" for="depreciation">
+                        Depreciation
+                        </label>
+                    </div>
+                    <div class="form-check form-control" style="padding-left:30px;margin-bottom: 10px;">
+                        <input class="form-check-input" type="radio" name="mileage" id="mileage" value="option1" >
+                        <label class="form-check-label" for="mileage">
+                        Mileage
+                        </label>
+                    </div>
+                    <div class="form-check form-control" style="padding-left:30px;margin-bottom: 10px;">
+                        <input class="form-check-input" type="radio" name="inatalment" id="inatalment" value="option1" >
+                        <label class="form-check-label" for="inatalment">
+                        Installment
+                        </label>
+                    </div>
+
+                    </form>
+                    
+                </div>
+                </div>
+            </div>
+        </div>
+
+    {{end}}
+
+    {{block "desktop_advance_search" .}}
+
+        <div class="container">    
+            <div class="row">
+                <div class="col-sm-3 advserch">
+                    <nav class="navbar navbar-light advserch1">
+                    <span class="filter">FILTER</span>
+                    <form class="form-inline">
+                        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Clear All</button>
+                    </form>
+                    </nav>
+
+                    <!-- 1 -->
+
+                    <div class="accordion advserch2" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left btfocus" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <span class="float-left">PRICE RANGE</span> <span class="float-right"><i class="fas fa-angle-down"></i>&nbsp;</span>
+                            </button>
+                        </h2>
+                        </div>
+
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <div class="row">
+                            <div class="col-sm-6 serchfrom">
+
+                                <form action="" method="">
+                                <div class="form-group">
+                                    <select id="" class="form-control fromeffect select2">
+                                    <option selected>From</option>
+                                    <option>$0k</option>
+                                    <option>$20k</option>
+                                    <option>$40k</option>
+                                    <option>$60k</option>
+                                    <option>$80k</option>
+                                    <option>$100k</option>
+                                    </select>
+                                </div>
+                                </form>
+
+                            </div>
+
+                            <div class="col-sm-6 serchto">
+
+                                <form action="" method="">
+                                <div class="form-group">
+                                    <select id="" class="form-control fromeffect select2">
+                                    <option selected>To</option>
+                                    <option>$0k</option>
+                                    <option>$20k</option>
+                                    <option>$40k</option>
+                                    <option>$60k</option>
+                                    <option>$80k</option>
+                                    <option>$100k</option>
+                                    </select>
+                                </div>
+                                </form>
+
+                            </div>
+
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <hr>
+                    </div>
+
+                    <!-- 2 -->
+
+                    <div class="accordion advserch2" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left btfocus" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                            <span class="float-left">DEPRECIATION RANGE</span> <span class="float-right"><i class="fas fa-angle-down"></i></span>
+                            </button>
+                        </h2>
+                        </div>
+
+                        <div id="collapseTwo" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <div class="row">
+                            <div class="col-sm-6 serchfrom">
+
+                                <form action="" method="">
+                                <div class="form-group">
+                                    <select id="" class="form-control fromeffect select2">
+                                    <option selected>From</option>
+                                    <option>$0k</option>
+                                    <option>$2k</option>
+                                    <option>$4k</option>
+                                    <option>$6k</option>
+                                    <option>$8k</option>
+                                    <option>$10k</option>
+                                    </select>
+                                </div>
+                                </form>
+
+                            </div>
+
+                            <div class="col-sm-6 serchto">
+
+                                <form action="" method="">
+                                <div class="form-group">
+                                    <select id="" class="form-control fromeffect select2">
+                                    <option selected>To</option>
+                                    <option>$0k</option>
+                                    <option>$2k</option>
+                                    <option>$4k</option>
+                                    <option>$6k</option>
+                                    <option>$8k</option>
+                                    <option>$10k</option>
+                                    </select>
+                                </div>
+                                </form>
+
+                            </div>
+
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <hr>
+                    </div>
+
+                    <!-- 3 -->
+
+                    <div class="accordion advserch2" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left btfocus" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                            <span class="float-left">REGISTRATION YEAR</span> <span class="float-right"><i class="fas fa-angle-down"></i></span>
+                            </button>
+                        </h2>
+                        </div>
+
+                        <div id="collapseThree" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <div class="row">
+                            <div class="col-sm-6 serchfrom">
+
+                                <form action="" method="">
+                                <div class="form-group">
+                                    <select id="" class="form-control fromeffect select2">
+                                    <option selected>From</option>
+                                    <option>1980</option>
+                                    <option>2005</option>
+                                    <option>2006</option>
+                                    <option>2007</option>
+                                    <option>2008</option>
+                                    <option>2009</option>
+                                    <option>2010</option>
+                                    <option>2011</option>
+                                    </select>
+                                </div>
+                                </form>
+
+                            </div>
+
+                            <div class="col-sm-6 serchto">
+
+                                <form>
+                                <div class="form-group">
+                                    <select id="inputState" class="form-control select2">
+                                    <option selected>To</option>
+                                    <option>2005</option>
+                                    <option>2006</option>
+                                    <option>2007</option>
+                                    <option>2008</option>
+                                    <option>2009</option>
+                                    <option>2010</option>
+                                    <option>2011</option>
+                                    </select>
+                                </div>
+                                </form>
+
+                            </div>
+
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <hr>
+                    </div>
+
+                    <!-- 4 -->
+
+                    <div class="accordion advserch2" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left btfocus" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                            <span class="float-left">MILEAGE</span> <span class="float-right"><i class="fas fa-angle-down"></i></span>
+                            </button>
+                        </h2>
+                        </div>
+
+                        <div id="collapseFour" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <div class="row">
+                            <div class="col-sm-6 serchfrom">
+
+                                <form action="" method="">
+                                <div class="form-group">
+                                    <select id="" class="form-control fromeffect select2">
+                                    <option selected>From</option>
+                                    <option>0 km</option>
+                                    <option>10,000 km</option>
+                                    <option>20,000 km</option>
+                                    <option>30,000 km</option>
+                                    <option>40,000 km</option>
+                                    <option>50,000 km</option>
+                                    <option>60,000 km</option>
+                                    <option>70,000 km</option>
+                                    </select>
+                                </div>
+                                </form>
+
+                            </div>
+
+                            <div class="col-sm-6 serchto">
+
+                                <form action="" method="">
+                                <div class="form-group">
+                                    <select id="" class="form-control fromeffect select2">
+                                    <option selected>To</option>
+                                    <option>10,000 km</option>
+                                    <option>20,000 km</option>
+                                    <option>30,000 km</option>
+                                    <option>40,000 km</option>
+                                    <option>50,000 km</option>
+                                    <option>60,000 km</option>
+                                    <option>70,000 km</option>
+                                    </select>
+                                </div>
+                                </form>
+
+                            </div>
+
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <hr>
+                    </div>
+
+                    <!-- 5 -->
+
+                    <div class="accordion advserch2" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left btfocus" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                            <span class="float-left">OWNERS</span> <span class="float-right"><i class="fas fa-angle-down"></i></span>
+                            </button>
+                        </h2>
+                        </div>
+
+                        <div id="collapseFive" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="ownernumber">
+                            <button type="button" class="btn number-of-owner">1</button>
+                            <button type="button" class="btn number-of-owner">2</button>
+                            <button type="button" class="btn number-of-owner">3</button>
+                            <button type="button" class="btn number-of-owner">4</button>
+                            <button type="button" class="btn number-of-owner">5</button>
+                        </div>
+                        </div>
+                    </div>
+                <hr>
+                </div>
+
+                <!-- 6 -->
+
+                <div class="accordion advserch2" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left btfocus" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                            <span class="float-left">TRANSMISSION</span> <span class="float-right"><i class="fas fa-angle-down"></i></span>
+                            </button>
+                        </h2>
+                        </div>
+
+                        <div id="collapseSix" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="ownernumber">
+                            <button type="button" class="btn btn-automatic">Automatic</button>
+                        </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+
+                <!-- 7 -->
+
+                <div class="accordion advserch2" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left btfocus" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+                            <span class="float-left">COE RENEWED</span> <span class="float-right"><i class="fas fa-angle-down"></i></span>
+                            </button>
+                        </h2>
+                        </div>
+
+                        <div id="collapseSeven" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="ownernumber">
+                            <!-- <button type="button" class="btn btn-automatic">Automatic</button> -->
+                        </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+
+                <!-- 8 -->
+
+                <div class="accordion advserch2" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left btfocus" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="true" aria-controls="collapseEight">
+                            <span class="float-left">OFFPEAK CAR</span> <span class="float-right"><i class="fas fa-angle-down"></i></span>
+                            </button>
+                        </h2>
+                        </div>
+
+                        <div id="collapseEight" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="ownernumber">
+                            <button type="button" class="btn btn-automatic">Regular</button>
+                            <button type="button" class="btn btn-automatic">OPC</button>
+                        </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+
+                <!-- 9 -->
+
+                <div class="accordion advserch2" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left btfocus" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="true" aria-controls="collapseNine">
+                            <span class="float-left">TAGS</span> <span class="float-right"><i class="fas fa-angle-down"></i></span>
+                            </button>
+                        </h2>
+                        </div>
+
+                        <div id="collapseNine" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="ownernumber">
+                            <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">Good Deal</label>
+                            </div>
+                            <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">Urgent Sale</label>
+                            </div>
+                            <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">Carro Selection</label>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+
+                <!-- 10 -->
+
+                <div class="accordion advserch2" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left btfocus" type="button" data-toggle="collapse" data-target="#collapseTen" aria-expanded="true" aria-controls="collapseTen">
+                            <span class="float-left">FUEL TYPE</span> <span class="float-right"><i class="fas fa-angle-down"></i></span>
+                            </button>
+                        </h2>
+                        </div>
+
+                        <div id="collapseTen" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="ownernumber">
+                            <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">Diesel</label>
+                            </div>
+                            <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">Petrol</label>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+
+                <!-- 11 -->
+
+                <div class="accordion advserch2" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left btfocus" type="button" data-toggle="collapse" data-target="#collapseEleven" aria-expanded="true" aria-controls="collapseEleven">
+                            <span class="float-left">BODY TYPE</span> <span class="float-right"><i class="fas fa-angle-down"></i></span>
+                            </button>
+                        </h2>
+                        </div>
+
+                        <div id="collapseEleven" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="ownernumber">
+                            <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">Hatchback</label>
+                            </div>
+                            <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">Mid Sized Sedan</label>
+                            </div>
+                            <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">Mpv</label>
+                            </div>
+                            <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">Sports</label>
+                            </div>
+                            <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">Suv</label>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="col-sm-9">
+                <div class="row advseclect">
+                    <div class="col-sm-4 advancedsearchinput">
+                    <form class="" action="" method="">
+                        <select class="form-control select2">
+                        <option selected>Search Any Make - Any Model</option>
+                        <option value="1">Mazda Mazda3</option>
+                        <option value="2">Toyota Harrier</option>
+                        <option value="3">Honda Civic</option>
+                        <option value="3">Hyundai ELANTRA</option>
+                        <option value="3">Mazda Mazda5</option>
+                        <option value="3">BMW 216d</option>
+                        <option value="3">Toyota Wish</option>
+                        </select>
+                    </form>
+                    </div>
+                    <div class="col-sm-8 advseclectmenu">
+                        
+                        <ul>
+                        <li class="sort">Sort:</li>
+                        <li><a href="">Latest</a></li>
+                        <li><a href="">Low Price</a></li>
+                        <li><a href="">High Price</a></li>
+                        <li><a href="">Depreciation</a></li>
+                        <li><a href="">Mileage</a></li>
+                        <li><a href="">Installment</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-sm-4 caritem">
+                        <div class="card res">
+                            <div class="res576">
+                                <a href="/car-details"><img src="resources/images/AutoCarSketch.png" class="card-img-top img-fluid" alt="..."></a>
+                                <p class="automanrating"><img src="resources/images/rating.png" alt=""></p>
+                                <div class="caritemoverlay">
+                                    <div class="caritemoverlaytext text-center">
+                                        <h4>Coming Soon</h4>
+                                        <p>The car is being readied for the next lucky owner</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-body res576body">
+                                <h5 class="card-title"><a href="car-single.html"><b><span>Audi</span> <span>A3</span> <span>2016</span></b></a></h5>
+                                <div class="card-text">
+                                    <div class="row">
+                                        <div class="col-sm-7 col-6" style="padding-left:5px;padding-right: 0px;">
+                                        <p class="text-left carreg">Reg. 27 Apr 18</p>
+                                        <p class="text-left carreg">1 Owner - 47300 km</p>
+                                        </div>
+                                        <div class="col-sm-5 col-6" style="padding-right:5px;padding-left: 0px;">
+                                        <p class="text-right carprice">S$85,800</p>
+                                        <p class="text-right caryearprice">$8,323/yr depre</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 caritem">
+                        <div class="card res">
+                            <div class="res576">
+                                <a href="/car-details"><img src="resources/images/AutoCarSketch.png" class="card-img-top img-fluid" alt="..."></a>
+                                <p class="automanrating"><img src="resources/images/rating.png" alt=""></p>
+                                <div class="caritemoverlay">
+                                <div class="caritemoverlaytext text-center">
+                                    <h4>Coming Soon</h4>
+                                    <p>The car is being readied for the next lucky owner</p>
+                                </div>
+                                </div>
+                            </div>
+
+                            <div class="card-body res576body">
+                                <h5 class="card-title"><a href="car-single.html"><b><span>Audi</span> <span>A4</span> <span>2017</span></b></a></h5>
+                                <div class="card-text">
+                                <div class="row">
+                                    <div class="col-sm-7 col-6" style="padding-left:5px;padding-right: 0px;">
+                                    <p class="text-left carreg">Reg. 27 Apr 18</p>
+                                    <p class="text-left carreg">1 Owner - 47300 km</p>
+                                    </div>
+                                    <div class="col-sm-5 col-6" style="padding-right:5px;padding-left: 0px;">
+                                    <p class="text-right carprice">S$85,800</p>
+                                    <p class="text-right caryearprice">$8,323/yr depre</p>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 caritem">
+                        <div class="card res">
+                            <div class="res576">
+                                <a href="/car-details"><img src="resources/images/AutoCarSketch.png" class="card-img-top img-fluid" alt="..."></a>
+                                <p class="automanrating"><img src="resources/images/rating.png" alt=""></p>
+                                <div class="caritemoverlay">
+                                <div class="caritemoverlaytext text-center">
+                                    <h4>Coming Soon</h4>
+                                    <p>The car is being readied for the next lucky owner</p>
+                                </div>
+                                </div>
+                            </div>
+
+                            <div class="card-body res576body">
+                                <h5 class="card-title"><a href="car-single.html"><b><span>Audi</span> <span>A5</span> <span>2018</span></b></a></h5>
+                                <div class="card-text">
+                                <div class="row">
+                                    <div class="col-sm-7 col-6" style="padding-left:5px;padding-right: 0px;">
+                                    <p class="text-left carreg">Reg. 27 Apr 18</p>
+                                    <p class="text-left carreg">1 Owner - 47300 km</p>
+                                    </div>
+                                    <div class="col-sm-5 col-6" style="padding-right:5px;padding-left: 0px;">
+                                    <p class="text-right carprice">S$85,800</p>
+                                    <p class="text-right caryearprice">$8,323/yr depre</p>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 caritem">
+                        <div class="card res">
+                            <div class="res576">
+                                <a href="/car-details"><img src="resources/images/carro_znL3RkmxKbzltMWm.jpg" class="card-img-top img-fluid" alt="..."></a>
+                                <p class="automanrating"><img src="resources/images/rating.png" alt=""></p>
+                                <div class="clearfix test">
+                                <button type="button" class="btn imagebadge1"><i class="fas fa-thumbs-up"></i> Good Deal</button>
+                                <button type="button" class="btn imagebadge2"><i class="fas fa-copyright"></i> Carro Selection</button>
+                                </div>
+                            </div>
+
+                            <div class="card-body res576body">
+                                <h5 class="card-title"><a href="car-single.html"><b><span>Audi</span> <span>A3</span> <span>2016</span></b></a></h5>
+                                <div class="card-text">
+                                <div class="row">
+                                    <div class="col-sm-7 col-6" style="padding-left:5px;padding-right: 0px;">
+                                    <p class="text-left carreg">Reg. 27 Apr 18</p>
+                                    <p class="text-left carreg">1 Owner - 47300 km</p>
+                                    </div>
+                                    <div class="col-sm-5 col-6" style="padding-right:5px;padding-left: 0px;">
+                                    <p class="text-right carprice">S$85,800</p>
+                                    <p class="text-right caryearprice">$8,323/yr depre</p>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 caritem">
+                        <div class="card res">
+                            <div class="res576">
+                                <a href="/car-details"><img src="resources/images/carro_znL3RkmxKbzltMWm.jpg" class="card-img-top img-fluid" alt="..."></a>
+                                <p class="automanrating"><img src="resources/images/rating.png" alt=""></p>
+                                <div class="clearfix test">
+                                <button type="button" class="btn imagebadge1"><i class="fas fa-thumbs-up"></i> Good Deal</button>
+                                <button type="button" class="btn imagebadge2"><i class="fas fa-copyright"></i> Carro Selection</button>
+                                </div>
+                            </div>
+
+                            <div class="card-body res576body">
+                                <h5 class="card-title"><a href="car-single.html"><b><span>Audi</span> <span>A4</span> <span>2017</span></b></a></h5>
+                                <div class="card-text">
+                                <div class="row">
+                                    <div class="col-sm-7 col-6" style="padding-left:5px;padding-right: 0px;">
+                                    <p class="text-left carreg">Reg. 27 Apr 18</p>
+                                    <p class="text-left carreg">1 Owner - 47300 km</p>
+                                    </div>
+                                    <div class="col-sm-5 col-6" style="padding-right:5px;padding-left: 0px;">
+                                    <p class="text-right carprice">S$85,800</p>
+                                    <p class="text-right caryearprice">$8,323/yr depre</p>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 caritem">
+                        <div class="card res">
+                            <div class="res576">
+                                <a href="/car-details"><img src="resources/images/carro_znL3RkmxKbzltMWm.jpg" class="card-img-top img-fluid" alt="..."></a>
+                                <p class="automanrating"><img src="resources/images/rating.png" alt=""></p>
+                                <div class="clearfix test">
+                                <button type="button" class="btn imagebadge1"><i class="fas fa-thumbs-up"></i> Good Deal</button>
+                                <button type="button" class="btn imagebadge2"><i class="fas fa-copyright"></i> Carro Selection</button>
+                                </div>
+                            </div>
+
+                            <div class="card-body res576body">
+                                <h5 class="card-title"><a href="car-single.html"><b><span>Audi</span> <span>A4</span> <span>2017</span></b></a></h5>
+                                <div class="card-text">
+                                <div class="row">
+                                    <div class="col-sm-7 col-6" style="padding-left:5px;padding-right: 0px;">
+                                    <p class="text-left carreg">Reg. 27 Apr 18</p>
+                                    <p class="text-left carreg">1 Owner - 47300 km</p>
+                                    </div>
+                                    <div class="col-sm-5 col-6" style="padding-right:5px;padding-left: 0px;">
+                                    <p class="text-right carprice">S$85,800</p>
+                                    <p class="text-right caryearprice">$8,323/yr depre</p>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 caritem">
+                        <div class="card res">
+                            <div class="res576">
+                                <a href="/car-details"><img src="resources/images/carro_znL3RkmxKbzltMWm.jpg" class="card-img-top img-fluid" alt="..."></a>
+                                <p class="automanrating"><img src="resources/images/rating.png" alt=""></p>
+                                <div class="clearfix test">
+                                <button type="button" class="btn imagebadge1"><i class="fas fa-thumbs-up"></i> Good Deal</button>
+                                <button type="button" class="btn imagebadge2"><i class="fas fa-copyright"></i> Carro Selection</button>
+                                </div>
+                            </div>
+
+                        <div class="card-body res576body">
+                            <h5 class="card-title"><a href="car-single.html"><b><span>Audi</span> <span>A5</span> <span>2018</span></b></a></h5>
+                            <div class="card-text">
+                            <div class="row">
+                                <div class="col-sm-7 col-6" style="padding-left:5px;padding-right: 0px;">
+                                <p class="text-left carreg">Reg. 27 Apr 18</p>
+                                <p class="text-left carreg">1 Owner - 47300 km</p>
+                                </div>
+                                <div class="col-sm-5 col-6" style="padding-right:5px;padding-left: 0px;">
+                                <p class="text-right carprice">S$85,800</p>
+                                <p class="text-right caryearprice">$8,323/yr depre</p>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 caritem">
+                        <div class="card res">
+                            <div class="res576">
+                                <a href="/car-details"><img src="resources/images/carro_znL3RkmxKbzltMWm.jpg" class="card-img-top img-fluid" alt="..."></a>
+                                <p class="automanrating"><img src="resources/images/rating.png" alt=""></p>
+                                <div class="clearfix test">
+                                <button type="button" class="btn imagebadge1"><i class="fas fa-thumbs-up"></i> Good Deal</button>
+                                <button type="button" class="btn imagebadge2"><i class="fas fa-copyright"></i> Carro Selection</button>
+                                </div>
+                            </div>
+
+                            <div class="card-body res576body">
+                                <h5 class="card-title"><a href="car-single.html"><b><span>Audi</span> <span>A3</span> <span>2016</span></b></a></h5>
+                                <div class="card-text">
+                                <div class="row">
+                                    <div class="col-sm-7 col-6" style="padding-left:5px;padding-right: 0px;">
+                                    <p class="text-left carreg">Reg. 27 Apr 18</p>
+                                    <p class="text-left carreg">1 Owner - 47300 km</p>
+                                    </div>
+                                    <div class="col-sm-5 col-6" style="padding-right:5px;padding-left: 0px;">
+                                    <p class="text-right carprice">S$85,800</p>
+                                    <p class="text-right caryearprice">$8,323/yr depre</p>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 caritem">
+                        <div class="card res">
+                        <div class="res576">
+                            <a href="/car-details"><img src="resources/images/carro_znL3RkmxKbzltMWm.jpg" class="card-img-top img-fluid" alt="..."></a>
+                            <p class="automanrating"><img src="resources/images/rating.png" alt=""></p>
+                            <div class="clearfix test">
+                            <button type="button" class="btn imagebadge1"><i class="fas fa-thumbs-up"></i> Good Deal</button>
+                            <button type="button" class="btn imagebadge2"><i class="fas fa-copyright"></i> Carro Selection</button>
+                            </div>
+                        </div>
+
+                        <div class="card-body res576body">
+                            <h5 class="card-title"><a href="car-single.html"><b><span>Audi</span> <span>A4</span> <span>2017</span></b></a></h5>
+                            <div class="card-text">
+                            <div class="row">
+                                <div class="col-sm-7 col-6" style="padding-left:5px;padding-right: 0px;">
+                                <p class="text-left carreg">Reg. 27 Apr 18</p>
+                                <p class="text-left carreg">1 Owner - 47300 km</p>
+                                </div>
+                                <div class="col-sm-5 col-6" style="padding-right:5px;padding-left: 0px;">
+                                <p class="text-right carprice">S$85,800</p>
+                                <p class="text-right caryearprice">$8,323/yr depre</p>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 caritem">
+                        <div class="card res">
+                        <div class="res576">
+                            <a href="/car-details"><img src="resources/images/carro_znL3RkmxKbzltMWm.jpg" class="card-img-top img-fluid" alt="..."></a>
+                            <p class="automanrating"><img src="resources/images/rating.png" alt=""></p>
+                            <div class="clearfix test">
+                            <button type="button" class="btn imagebadge1"><i class="fas fa-thumbs-up"></i> Good Deal</button>
+                            <button type="button" class="btn imagebadge2"><i class="fas fa-copyright"></i> Carro Selection</button>
+                            </div>
+                        </div>
+
+                        <div class="card-body res576body">
+                            <h5 class="card-title"><a href="car-single.html"><b><span>Audi</span> <span>A5</span> <span>2017</span></b></a></h5>
+                            <div class="card-text">
+                            <div class="row">
+                                <div class="col-sm-7 col-6" style="padding-left:5px;padding-right: 0px;">
+                                <p class="text-left carreg">Reg. 27 Apr 18</p>
+                                <p class="text-left carreg">1 Owner - 47300 km</p>
+                                </div>
+                                <div class="col-sm-5 col-6" style="padding-right:5px;padding-left: 0px;">
+                                <p class="text-right carprice">S$85,800</p>
+                                <p class="text-right caryearprice">$8,323/yr depre</p>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 caritem">
+                        <div class="card res">
+                        <div class="res576">
+                            <a href="/car-details"><img src="resources/images/carro_znL3RkmxKbzltMWm.jpg" class="card-img-top img-fluid" alt="..."></a>
+                            <p class="automanrating"><img src="resources/images/rating.png" alt=""></p>
+                            <div class="clearfix test">
+                            <button type="button" class="btn imagebadge1"><i class="fas fa-thumbs-up"></i> Good Deal</button>
+                            <button type="button" class="btn imagebadge2"><i class="fas fa-copyright"></i> Carro Selection</button>
+                            </div>
+                        </div>
+
+                        <div class="card-body res576body">
+                            <h5 class="card-title"><a href="car-single.html"><b><span>Audi</span> <span>A3</span> <span>2018</span></b></a></h5>
+                            <div class="card-text">
+                            <div class="row">
+                                <div class="col-sm-7 col-6" style="padding-left:5px;padding-right: 0px;">
+                                <p class="text-left carreg">Reg. 27 Apr 18</p>
+                                <p class="text-left carreg">1 Owner - 47300 km</p>
+                                </div>
+                                <div class="col-sm-5 col-6" style="padding-right:5px;padding-left: 0px;">
+                                <p class="text-right carprice">S$85,800</p>
+                                <p class="text-right caryearprice">$8,323/yr depre</p>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 caritem">
+                        <div class="card res">
+                        <div class="res576">
+                            <a href="/car-details"><img src="resources/images/carro_znL3RkmxKbzltMWm.jpg" class="card-img-top img-fluid" alt="..."></a>
+                            <p class="automanrating"><img src="resources/images/rating.png" alt=""></p>
+                            <div class="clearfix test">
+                            <button type="button" class="btn imagebadge1"><i class="fas fa-thumbs-up"></i> Good Deal</button>
+                            <button type="button" class="btn imagebadge2"><i class="fas fa-copyright"></i> Carro Selection</button>
+                            </div>
+                        </div>
+
+                        <div class="card-body res576body">
+                            <h5 class="card-title"><a href="car-single.html"><b><span>Audi</span> <span>A4</span> <span>2016</span></b></a></h5>
+                            <div class="card-text">
+                            <div class="row">
+                                <div class="col-sm-7 col-6" style="padding-left:5px;padding-right: 0px;">
+                                <p class="text-left carreg">Reg. 27 Apr 18</p>
+                                <p class="text-left carreg">1 Owner - 47300 km</p>
+                                </div>
+                                <div class="col-sm-5 col-6" style="padding-right:5px;padding-left: 0px;">
+                                <p class="text-right carprice">S$85,800</p>
+                                <p class="text-right caryearprice">$8,323/yr depre</p>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+    {{end}}
+
+    {{block "how_to_buy" .}}
+
+        <div class="howtobuy">
+            <div class="container">
+                <h5>How to Buy a Used Car at Automan</h5>
+                <div class="row">
+                    <div class="col-sm-3 text-center howtobuy_step">
+                    <img src="resources/images/howto.jpg" alt="" class="img-fluid">
+                    <i class="fas fa-arrow-right"></i>
+                    <p>Browse high-quality pre-owned cars</p>
+                    </div>
+
+                    <div class="col-sm-3 text-center howtobuy_step">
+                    <img src="resources/images/howto2.jpg" alt="" class="img-fluid">
+                    <i class="fas fa-arrow-right"></i>
+                    <p>Submit your contact details</p>
+                    </div>
+
+                    <div class="col-sm-3 text-center howtobuy_step">
+                    <img src="resources/images/howto3.jpg" alt="" class="img-fluid">
+                    <i class="fas fa-arrow-right"></i>
+                    <p>Come down for an inspection</p>
+                    </div>
+
+                    <div class="col-sm-3 text-center">
+                    <img src="resources/images/howto4.jpg" alt="" class="img-fluid">
+                    <p>Drive home your new ride</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    {{end}}
+
+    {{block "buy_faq" .}}
+        
+        <div class="requestfaq">
+            <div class="container">
+                <h5>Frequently Asked Questions</h5>
+                <div class="row">
+                    <div class="col-md-8 offset-md-2">
+                        <div class="accordion" id="accordionExample">
+                            <div class="card">
+                                <div class="card-header" id="headingOne">
+                                    <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Q1: How will my car be sold?
+                                    </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                    <p>When you choose to sell your car through AutoMan, you will enjoy a hassle-free car selling experience with no hidden fees and no guesswork.<br><br>
+                                    Here’s how it works:<br><br>
+                                    <b>Step 1</b> After verifying your details, we will put your car up for Auction to our network of over 1,000 trusted dealers in Singpore. <br><br>
+                                    <b>Step 2</b> Our trusted network of dealers will then bid for your car. In just 24hrs, you will be notified of the highest bid that was received.<br><br>
+                                    <b>Step 3</b> If you are happy with the offer, we will help schedule a viewing/inspection together with the dealer.<br><br>
+                                    But if the offer doesn’t meet your expectations, no pressure. You can choose not to sell your car and walk away, penalty-free!<br><br>
+                                    Our Auctions are conducted on weekdays from 10am to 4pm, so you can get top price of the day.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingTwo">
+                                    <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Q2: Where will the viewing take place?
+                                    </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                    <p>When you choose to sell your car through AutoMan, you will enjoy a hassle-free car selling experience with no hidden fees and no guesswork.<br><br>
+                                    Here’s how it works:<br><br>
+                                    <b>Step 1</b> After verifying your details, we will put your car up for Auction to our network of over 1,000 trusted dealers in Singpore. <br><br>
+                                    <b>Step 2</b> Our trusted network of dealers will then bid for your car. In just 24hrs, you will be notified of the highest bid that was received.<br><br>
+                                    <b>Step 3</b> If you are happy with the offer, we will help schedule a viewing/inspection together with the dealer.<br><br>
+                                    But if the offer doesn’t meet your expectations, no pressure. You can choose not to sell your car and walk away, penalty-free!<br><br>
+                                    Our Auctions are conducted on weekdays from 10am to 4pm, so you can get top price of the day.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingThree">
+                                    <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Q3: What are the fees involved to sell my car through Carro?
+                                    </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                    <p>When you choose to sell your car through AutoMan, you will enjoy a hassle-free car selling experience with no hidden fees and no guesswork.<br><br>
+                                    Here’s how it works:<br><br>
+                                    <b>Step 1</b> After verifying your details, we will put your car up for Auction to our network of over 1,000 trusted dealers in Singpore. <br><br>
+                                    <b>Step 2</b> Our trusted network of dealers will then bid for your car. In just 24hrs, you will be notified of the highest bid that was received.<br><br>
+                                    <b>Step 3</b> If you are happy with the offer, we will help schedule a viewing/inspection together with the dealer.<br><br>
+                                    But if the offer doesn’t meet your expectations, no pressure. You can choose not to sell your car and walk away, penalty-free!<br><br>
+                                    Our Auctions are conducted on weekdays from 10am to 4pm, so you can get top price of the day.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    {{end}}
+
+{{end}}
+
+
+{{define "script"}}
+
+    <script>
+      $('.select2').select2();
+
+      function openNav() {document.getElementById("mySidepanel").style.width = "70%";}
+      function closeNav() {document.getElementById("mySidepanel").style.width = "0";}
+
+      function openNav2() {document.getElementById("mySidepanel2").style.width = "70%";}
+      function closeNav2() {document.getElementById("mySidepanel2").style.width = "0";}
+
+      function openNav3() {document.getElementById("mySidepanel3").style.width = "70%";}
+      function closeNav3() {document.getElementById("mySidepanel3").style.width = "0";}
+
+      // menu active
+      $(function(){
+        $('.menulist a').filter(function(){return this.href==location.href}).parent().addClass('menu-active').siblings().removeClass('menu-active')
+      });
+
+        <!-- dropdown with search -->
+
+      button = document.querySelector('button');
+      datalist = document.querySelector('datalist');
+      select = document.querySelector('select');
+      options = select.options;
+
+      /* on arrow button click, show/hide the DDL*/
+      button.addEventListener('click', toggle_ddl);
+
+      function toggle_ddl() {
+        if (datalist.style.display === '') {
+          datalist.style.display = 'block';
+          this.textContent = "▲";
+          /* If input already has a value, select that option from DDL */
+          var val = input.value;
+          for (var i = 0; i < options.length; i++) {
+            if (options[i].text === val) {
+              select.selectedIndex = i;
+              break;
+            }
+          }
+        } else hide_select();
+      }
+
+      /* when user selects an option from DDL, write it to text field */
+      select.addEventListener('change', fill_input);
+
+      function fill_input() {
+        input.value = options[this.selectedIndex].value;
+        hide_select();
+      }
+
+      /* when user wants to type in text field, hide DDL */
+      input = document.querySelector('input');
+      input.addEventListener('focus', hide_select);
+
+      function hide_select() {
+        datalist.style.display = '';
+        button.textContent = "▼";
+        style.boder = '5px solid green';
+      }
+
+      // add active class acordian
+      $(document).ready(function(){
+        $('.requestfaq .card-header').click(function(){
+          $('.card-header').removeClass("card-active");
+          $(this).addClass("card-active");
+        });
+      });
+    </script>
+
+{{end}}

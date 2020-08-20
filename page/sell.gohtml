@@ -1,0 +1,347 @@
+{{define "style_src"}}
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="resources/css/fontawesome.min.css">
+    <link rel="stylesheet" href="resources/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="resources/css/bootstrap.min.css">
+    <!--- slider caurosel ---------->
+    <link rel="stylesheet" href="resources/css/select2.min.css" />
+    <link rel="stylesheet" href="resources/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="resources/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="resources/css/lightbox.min.css">
+    <link rel="stylesheet" href="resources/css/lc_lightbox.css">
+    <link rel="stylesheet" href="resources/css/minimal.css">
+    <link rel="stylesheet" href="resources/css/main.css">
+
+{{end}}
+
+{{define "banner"}}
+
+    <div class="carbanner">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <img src="resources/images/used-car.png" alt="" class="img-fluid">
+          </div>
+          <div class="col-sm-8 carbannertext sell_banner">
+            <p style="">Letting go of your vehicle can be difficult and you would want to find the right value for it. Automan does just that. Simply follow the easy steps</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+{{end}}
+
+
+{{define "custom"}}
+
+    {{block "sell_steps_form" .}}
+
+        <div class="mainsection">      
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 req_service_steps">
+                    <div class="req_service container">
+                        <h2 class="font-weight-bolder text-center">5 Steps To Request Service</h2>
+                        <p class="text-center"></p>
+                    </div>
+                    <div class="row process-column">
+                        <div class="col-1 number">
+                        <div><span class="active">1</span></div>
+                        <div class="req_step_num req_step_num2"><span>2</span></div>
+                        <div class="req_step_num req_step_num3"><span>3</span></div>
+                        <div class="req_step_num req_step_num4"><span>4</span></div>
+                        <div class="req_step_num req_step_num5"><span>5</span></div>
+                        </div>
+                        <div class="col-11 req_step_line">
+                        <div class="row req_step active">
+                            <div class="col-4"><img src="resources/images/request1.jpg" alt="" class="req_img"></div>
+                            <div class="col-8">
+                            <h6 class="sell_step_title">Customer & Vehicle Details</h6>
+                            <p>Pick the service you are looking for- from the website.</p>
+                            </div>
+                        </div>
+                        <div class="row req_step">
+                            <div class="col-4">
+                            <img src="resources/images/requestblack-white2.jpg" alt="" class="req_img_active">
+                            <!-- <img src="resources/images/request1.jpg" alt="" class="img-fluid req_img_active"> -->
+                            </div>
+                            <div class="col-8">
+                            <h6 class="sell_step_title">Photos & Papers Upload</h6>
+                            <p>Pick the service you are looking for- from the website.</p>
+                            </div>
+                        </div>
+                        <div class="row req_step">
+                            <div class="col-4">
+                            <img src="resources/images/requestblack-white2.jpg" alt="" class="req_img_active">
+                            <!-- <img src="resources/images/request2.jpg" alt="" class="img-fluid req_img_active"> -->
+                            </div>
+                            <div class="col-8">
+                            <h6 class="sell_step_title">Inspection by Automan</h6>
+                            <p>Pick the service you are looking for- from the website.</p>
+                            </div>
+                        </div>
+                        <div class="row req_step">
+                            <div class="col-4">
+                            <img src="resources/images/requestblack-white.jpg" alt="" class="req_img_active">
+                            <!-- <img src="resources/images/request1.jpg" alt="" class="img-fluid req_img_active"> -->
+                            </div>
+                            <div class="col-8">
+                            <h6 class="sell_step_title">Estimate & Rating by Automan</h6>
+                            <p>Pick the service you are looking for- from the website.</p>
+                            </div>
+                        </div>
+                        <div class="row req_step req_step_last">
+                            <div class="col-4">
+                            <img src="resources/images/requestblack-white2.jpg" alt="" class="req_img_active">
+                            <!-- <img src="resources/images/request1.jpg" alt="" class="img-fluid req_img_active"> -->
+                            </div>
+                            <div class="col-8">
+                            <h6 class="sell_step_title">Publish in Automan Site</h6>
+                            <p>Pick the service you are looking for- from the website.</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="col-md-6 requestform">
+                    <h2 class="font-weight-bolder req_form_title text-center">Tell us more about your car</h2>
+                        <form action="/">
+                        
+                        <div id="requestForm" class="owl-carousel">
+
+                            <div class="requestformstep">
+                            <h5>Customer & Vehicle Details</h5>
+                            <div class="item">
+                                <p>Name*</p>
+                                <input type="text" name="name" placeholder="Enter Your Full Name"/>
+                            </div>
+                            <div class="item">
+                                <p>Phone*</p>
+                                <input type="text" name="phone" placeholder="Enter Your Phone Number"/>
+                            </div>
+                            <div class="item">
+                                <p>Email*</p>
+                                <input type="email" name="email" placeholder="Enter Your Email Address"/>
+                            </div>
+                            <div class="item">
+                                <p>Address*</p>
+                                <input type="text" name="address" placeholder="Address" />
+                            </div>
+                            <div class="item">
+                                <p>Vehicle Make</p>
+                                <div class="">
+                                <select class="form-control select2" style="width:100%;padding:9px 15px;">
+                                    <option value="">Select your vehicle name</option>
+                                    <option value="1">Audi</option>
+                                    <option value="2">BMW</option>
+                                    <option value="3">Citroen</option>
+                                    <option value="4">Ford</option>
+                                    <option value="5">Honda</option>
+                                    <option value="6">Jaguar</option>
+                                    <option value="7">Land Rover</option>
+                                    <option value="8">Mercedes</option>
+                                    <option value="9">Mini</option>
+                                    <option value="10">Nissan</option>
+                                    <option value="11">Toyota</option>
+                                    <option value="12">Volvo</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <p>Vehicle Model</p>
+                                <div class="">
+                                <select class="form-control select2" style="width:100%;padding:9px 15px;">
+                                    <option selected>Search Any Make - Any Model</option>
+                                    <option value="1">Mazda Mazda3</option>
+                                    <option value="2">Toyota Harrier</option>
+                                    <option value="3">Honda Civic</option>
+                                    <option value="3">Hyundai ELANTRA</option>
+                                    <option value="3">Mazda Mazda5</option>
+                                    <option value="3">BMW 216d</option>
+                                    <option value="3">Toyota Wish</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <p>Vehicle Year (Mfg)</p>
+                                <div class="">
+                                <select class="form-control select2" style="width:100%;padding:9px 15px;">
+                                    <option value="">Select your vehicle (Mfg) year</option>
+                                    <option value="1">1994</option>
+                                    <option value="2">1995</option>
+                                    <option value="3">1996</option>
+                                    <option value="4">1997</option>
+                                    <option value="1">1994</option>
+                                    <option value="2">1995</option>
+                                    <option value="3">1996</option>
+                                    <option value="4">1997</option>
+                                    <option value="1">1994</option>
+                                    <option value="2">1995</option>
+                                    <option value="3">1996</option>
+                                    <option value="4">1997</option>
+                                    <option value="1">1994</option>
+                                    <option value="2">1995</option>
+                                    <option value="3">1996</option>
+                                    <option value="4">1997</option>
+                                </select>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <p>Vehicle Year (Reg.)</p>
+                                <div class="">
+                                <select class="form-control select2" style="width:100%;padding:9px 15px;">
+                                    <option value="">Select your vehicle (Reg.) year</option>
+                                    <option value="1">1994</option>
+                                    <option value="2">1995</option>
+                                    <option value="3">1996</option>
+                                    <option value="4">1997</option>
+                                    <option value="1">1994</option>
+                                    <option value="2">1995</option>
+                                    <option value="3">1996</option>
+                                    <option value="4">1997</option>
+                                    <option value="1">1994</option>
+                                    <option value="2">1995</option>
+                                    <option value="3">1996</option>
+                                    <option value="4">1997</option>
+                                    <option value="1">1994</option>
+                                    <option value="2">1995</option>
+                                    <option value="3">1996</option>
+                                    <option value="4">1997</option>
+                                </select>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <p>Select Serial</p>
+                                <div class="">
+                                <div class="form-row">
+                                    <div class="col-6">
+                                    <!-- <input type="text" class="form-control" placeholder="Dhaka Metro"> -->
+                                    <select class="form-control select2" style="width:100%;padding:9px 15px;">
+                                        <option value="">Dhaka Metro</option>
+                                        <option value="1">Chattagram Metro</option>
+                                        <option value="2">Sylhet Metro</option>
+                                    </select>
+                                    </div>
+                                    <div class="col-6">
+                                    <input type="text" name="name" placeholder="GHA 00 000"/>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+
+                            </div>
+
+                            <div class="requestformstep">
+                            <h5>Photos & Papers Upload</h5>
+                            <div class="item">
+                                <!-- <p>Select Service Category</p> -->
+                                <div style="margin-bottom:50px;">
+                                <div class="form-row">
+                                    <div class="col-6">
+                                    <label for="exampleFormControlFile1">Vehicle Registration Certificate</label>
+                                    </div>
+                                    <div class="col">
+                                    <input type="file" class="form-control-file" id="exampleFormControlFile1" style="border:none;padding-top:0;padding-left:5;">
+                                    </div>
+                                </div>
+                                <div class="form-row" style="margin-top:15px;">
+                                    <div class="col-6">
+                                    <label for="exampleFormControlFile1">Fitness & Tax Papers</label>
+                                    </div>
+                                    <div class="col">
+                                    <input type="file" class="form-control-file" id="exampleFormControlFile1" style="border:none;padding-top:0;padding-left:5;">
+                                    </div>
+                                </div>
+                                <div class="form-row" style="margin-top:15px;">
+                                    <div class="col-6">
+                                    <label for="exampleFormControlFile1">Photos (front, rear, both sides)</label>
+                                    </div>
+                                    <div class="col">
+                                    <input type="file" class="form-control-file" id="exampleFormControlFile1" style="border:none;padding-top:0;padding-left:5;">
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+
+                        </div>
+
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    {{end}}
+
+{{end}}
+
+
+{{define "script_src"}}
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <script src="resources/js/lightbox-plus-jquery.min.js"></script>
+    <script src="resources/js/lc_lightbox.lite.js"></script>
+    <script src="resources/js/alloy_finger.min.js"></script>
+    <script src="resources/js/owl.carousel.min.js"></script>
+    <script src="resources/js/all.min.js"></script>
+
+{{end}}
+
+
+{{define "script"}}
+
+    <script> $('.select2').select2(); </script>
+    <script>
+      function openNav() {document.getElementById("mySidepanel").style.width = "70%";}
+
+      function closeNav() {document.getElementById("mySidepanel").style.width = "0";}
+      // sidepannel2
+      function openNav2() {document.getElementById("mySidepanel2").style.width = "70%";}
+
+      function closeNav2() {document.getElementById("mySidepanel2").style.width = "0";}
+      // mySidepanel3
+      function openNav3() {document.getElementById("mySidepanel3").style.width = "70%";}
+
+      function closeNav3() {document.getElementById("mySidepanel3").style.width = "0";}
+
+      // request form slider
+      $(document).ready(function() {
+        $('#requestForm').owlCarousel({
+            loop:false,
+            margin:5,
+            nav:true,
+            autoHeight:true,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:1
+                },
+                1000:{
+                    items:1
+                }
+            },
+            navText: ["<i class='fas fa-angle-left'></i> Back","Next"]
+        });
+
+      });
+      
+
+      // menu active
+      $(function(){
+        $('.menulist a').filter(function(){return this.href==location.href}).parent().addClass('menu-active').siblings().removeClass('menu-active')
+      })
+    </script>
+
+{{end}}
