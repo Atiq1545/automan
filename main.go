@@ -1,27 +1,22 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"html/template"
+	"log"
 	"net/http"
 	"os"
 	"path/filepath"
 
 	"github.com/mateors/mcb"
+	"github.com/mateors/mtool"
 )
 
 var db *mcb.DB
-var bucketName string
-
 var workingDirectory string
 var websiteTemplateAbsPath string
 var adminTemplateAbsPath string
-
-// E:\GOLANG\src\mateors\tutorial\template\basic_template\define\templates\admin\*.gohtml
-// E:\GOLANG\src\mateors\tutorial\template\basic_template\define\templates\admin\*.
-// E:\GOLANG\src\mateors\tutorial\template\basic_template\define\templates\website\*.gohtml
-
-// /var/www/share/html/template/basic_template\define\templates\admin\*.gohtml
 
 func init() {
 
@@ -45,26 +40,56 @@ func init() {
 
 func main() {
 
-	http.Handle("/resources/", http.StripPrefix("/resources/", http.FileServer(http.Dir("./assets"))))
+	//smux.PathPrefix("/vdata/").Handler(http.StripPrefix("/vdata/", http.FileServer(http.Dir(data_path))))
+
+	dataPath := filepath.Join(workingDirectory, "data")
+	http.Handle("/vdata/", http.StripPrefix("/vdata/", http.FileServer(http.Dir(dataPath))))
+
+	assetPath := filepath.Join(workingDirectory, "assets")
+	http.Handle("/resources/", http.StripPrefix("/resources/", http.FileServer(http.Dir(assetPath))))
 
 	http.HandleFunc("/", home)
 	http.HandleFunc("/why", why)
-<<<<<<< HEAD
-	http.HandleFunc("/services", services)
-	http.HandleFunc("/request-service", requestService)
-	http.HandleFunc("/buy", buy)
-	http.HandleFunc("/sell", sell)
-	http.HandleFunc("/promotion", promotion)
-	http.HandleFunc("/contact", contact)
-	http.HandleFunc("/about", about)
-	http.HandleFunc("/car-details", carDetails)
-=======
 	http.HandleFunc("/login", login)
-
 	http.HandleFunc("/forgot_password", forgetPassword)
->>>>>>> 69e929ac2d95134b70ad8c97103f0bb47d55a299
+	http.HandleFunc("/changepass", changepass)
+
+	http.HandleFunc("/dashboard", dashboard)
+
+	// retMap := make(map[string]interface{}, 0)
+
+	// retMap["status"] = 10
+	// retMap["name"] = "Mostain"
+	// retMap["marks"] = 50.89
+	// retMap["ages"] = []string{"10", "20"}
+
+	// for k, v := range retMap {
+
+	// 	xType := ValueType(v)
+	// 	fmt.Println(k, "=", xType)
+	// }
+
+	// fmt.Println(retMap)
 
 	http.ListenAndServe(":8080", nil)
+
+	/*
+		fmt.Println()
+		d := "access_name:student,cid:1,company_name:AUTOMAN LTD.,login_id:2,sid:7eafb6b5-d116-4362-82b8-ff8b45252135,account_id:2,account_name:MOSTAIN BILLAH,email:bill.rassel@gmail.com,mobile:01672710028"
+		var key string = "Mos$unAriWusVruR0mBil360"
+
+		hcode := EncodeStr(d, key)
+		fmt.Println(hcode, len(hcode))
+
+		fmt.Println()
+		plaintext := DecodeStr(hcode, key)
+		fmt.Println("Decrypted:", plaintext, len(plaintext))
+
+		fmt.Println()
+		sMap := stringToMap(d)
+		fmt.Println(sMap, len(sMap))
+		fmt.Println(sMap["sid"])
+	*/
 
 }
 
@@ -114,171 +139,45 @@ func why(w http.ResponseWriter, r *http.Request) {
 
 }
 
-<<<<<<< HEAD
-func services(w http.ResponseWriter, r *http.Request) {
-
-	//New("abase.gohtml")
-	ptmp, err := template.ParseGlob("template/*.gohtml")
-=======
 func login(w http.ResponseWriter, r *http.Request) {
 
 	ptmp, err := template.ParseFiles("page/login.gohtml")
->>>>>>> 69e929ac2d95134b70ad8c97103f0bb47d55a299
 	if err != nil {
 		fmt.Println(err.Error())
 	}
 
-<<<<<<< HEAD
-	_, err = ptmp.ParseFiles("page/service.gohtml")
-	if err != nil {
-		fmt.Println(err.Error())
-	}
-
-	data := struct {
-		Title string
-	}{
-		Title: "Services - AutoMan",
-	}
-
-	//smtp.SendMail()
-	ptmp.Execute(w, data)
-
-}
-
-func requestService(w http.ResponseWriter, r *http.Request) {
-
-	ptmp, err := template.ParseGlob("template/*.gohtml")
-	if err != nil {
-		fmt.Println(err.Error())
-	}
-
-	_, err = ptmp.ParseFiles("page/request-service.gohtml")
-	if err != nil {
-		fmt.Println(err.Error())
-	}
-
-	data := struct {
-		Title string
-	}{
-		Title: "Request Services - AutoMan",
-	}
-
-	ptmp.Execute(w, data)
-}
-
-func buy(w http.ResponseWriter, r *http.Request) {
-
-	ptmp, err := template.ParseGlob("template/*.gohtml")
-	if err != nil {
-		fmt.Println(err.Error())
-	}
-
-	_, err = ptmp.ParseFiles("page/buy.gohtml")
-	if err != nil {
-		fmt.Println(err.Error())
-	}
-
-	data := struct {
-		Title string
-	}{
-		Title: "Buy - AutoMan",
-	}
-
-	ptmp.Execute(w, data)
-}
-
-func sell(w http.ResponseWriter, r *http.Request) {
-
-	ptmp, err := template.ParseGlob("template/*.gohtml")
-	if err != nil {
-		fmt.Println(err.Error())
-	}
-
-	_, err = ptmp.ParseFiles("page/sell.gohtml")
-	if err != nil {
-		fmt.Println(err.Error())
-	}
-
-	data := struct {
-		Title string
-	}{
-		Title: "Sell AutoMan",
-	}
-
-	ptmp.Execute(w, data)
-}
-
-func promotion(w http.ResponseWriter, r *http.Request) {
-
-	ptmp, err := template.ParseGlob("template/*.gohtml")
-	if err != nil {
-		fmt.Println(err.Error())
-	}
-
-	_, err = ptmp.ParseFiles("page/promotion.gohtml")
-	if err != nil {
-		fmt.Println(err.Error())
-	}
-
-	data := struct {
-		Title string
-	}{
-		Title: "Promotion - AutoMan",
-	}
-
-	ptmp.Execute(w, data)
-
-}
-
-func contact(w http.ResponseWriter, r *http.Request) {
-
-	//New("abase.gohtml")
-	ptmp, err := template.ParseGlob("template/*.gohtml")
-	if err != nil {
-		fmt.Println(err.Error())
-	}
-
-	_, err = ptmp.ParseFiles("page/contact.gohtml")
-	if err != nil {
-		fmt.Println(err.Error())
-	}
-
-	data := struct {
-		Title string
-	}{
-		Title: "Contact - AutoMan",
-=======
 	r.ParseForm()
-
 	fmt.Println("Method:", r.Method)
 
 	if r.Method == "POST" {
 
-		fmt.Println("form received", r.Form)
-
+		//fmt.Println("form received", r.Form)
 		//method 1 to catch html form value
 		username := r.FormValue("username")
 		password := r.FormValue("password")
 		geolocation := r.FormValue("geolocation")
 		ip := r.FormValue("ip")
 		platform := r.FormValue("platform")
-		screen_size := r.FormValue("screen_size")
+		screenSize := r.FormValue("screen_size")
+		battery := r.FormValue("battery")
 
 		fmt.Println("username:", username)
 		fmt.Println("password:", password)
 		fmt.Println("geolocation:", geolocation)
 		fmt.Println("ip:", ip)
 		fmt.Println("platform:", platform)
-		fmt.Println("screen_size:", screen_size)
+		fmt.Println("screen_size:", screenSize)
+		fmt.Println("Battery:", battery)
 
+		//fmt.Println()
 		fmt.Println()
-		fmt.Println()
 
-		//Mthod 2 to catch html form value map[string][]string
-		for key, valA := range r.Form {
+		Login(r, w, db)
 
-			fmt.Println(key, valA[0])
-		}
+		//Mthod 2 /Advance way to catch html form value map[string][]string
+		// for key, valA := range r.Form {
+		// 	fmt.Println(key, valA[0])
+		// }
 
 	}
 
@@ -288,7 +187,6 @@ func contact(w http.ResponseWriter, r *http.Request) {
 	}{
 		Title:      "Login",
 		LoginError: "",
->>>>>>> 69e929ac2d95134b70ad8c97103f0bb47d55a299
 	}
 
 	//smtp.SendMail()
@@ -296,54 +194,14 @@ func contact(w http.ResponseWriter, r *http.Request) {
 
 }
 
-<<<<<<< HEAD
-func about(w http.ResponseWriter, r *http.Request) {
-
-	ptmp, err := template.ParseGlob("template/*.gohtml")
-	if err != nil {
-		fmt.Println(err.Error())
-	}
-
-	_, err = ptmp.ParseFiles("page/about.gohtml")
-=======
 func forgetPassword(w http.ResponseWriter, r *http.Request) {
 
 	ptmp, err := template.ParseFiles("page/forget_password.gohtml")
->>>>>>> 69e929ac2d95134b70ad8c97103f0bb47d55a299
 	if err != nil {
 		fmt.Println(err.Error())
 	}
 
 	data := struct {
-<<<<<<< HEAD
-		Title string
-	}{
-		Title: "About - AutoMan",
-	}
-
-	ptmp.Execute(w, data)
-}
-
-func carDetails(w http.ResponseWriter, r *http.Request) {
-
-	ptmp, err := template.ParseGlob("template/*.gohtml")
-	if err != nil {
-		fmt.Println(err.Error())
-	}
-
-	_, err = ptmp.ParseFiles("page/car-details.gohtml")
-	if err != nil {
-		fmt.Println(err.Error())
-	}
-
-	data := struct {
-		Title string
-	}{
-		Title: "Car Details - AutoMan",
-	}
-
-	ptmp.Execute(w, data)
-=======
 		Title      string
 		LoginError string
 	}{
@@ -354,5 +212,148 @@ func carDetails(w http.ResponseWriter, r *http.Request) {
 	//smtp.SendMail()
 	ptmp.Execute(w, data)
 
->>>>>>> 69e929ac2d95134b70ad8c97103f0bb47d55a299
+}
+
+func dashboard(w http.ResponseWriter, r *http.Request) {
+
+	defer func() {
+		if r := recover(); r != nil {
+			fmt.Println("dashboard panicking with value >>", r)
+		}
+	}()
+
+	//check if user logged in or not
+	isLoggedIn, loginType, logData := CheckIfAlreadyLoggedIn(r, db)
+	fmt.Println("/dashboard ....")
+	fmt.Println(isLoggedIn, loginType)
+
+	if isLoggedIn == false {
+		fmt.Println("No session found, redirecting /dashboard to /login")
+		http.Redirect(w, r, "/login", http.StatusSeeOther)
+		return
+	}
+
+	var cid, accountID string
+
+	cid = mtool.GetMapValue(logData, "cid")
+	accountID = mtool.GetMapValue(logData, "account_id")
+	fmt.Println(cid, accountID)
+
+	ptmp, err := template.ParseGlob(adminTemplateAbsPath)
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	pageName := filepath.Join(workingDirectory, "page", "dashboard.gohtml")
+	ptmp, err = ptmp.ParseFiles(pageName)
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	data := struct {
+		Title           string
+		AccountName     string
+		CompanyName     string
+		CompanyWebsite  string
+		LoginType       string
+		Page            string
+		WebuserCount    int
+		SystemuserCount int
+	}{
+		Title:           "Dashboard",
+		AccountName:     mtool.GetMapValue(logData, "account_name"),
+		CompanyName:     mtool.GetMapValue(logData, "company_name"),
+		CompanyWebsite:  mtool.GetMapValue(logData, "website"),
+		LoginType:       "SUPERADMIN",
+		Page:            r.RequestURI,
+		WebuserCount:    0,
+		SystemuserCount: 5,
+	}
+
+	if err := ptmp.Execute(w, data); err != nil {
+		log.Fatal(err)
+	}
+
+}
+
+func changepass(w http.ResponseWriter, r *http.Request) {
+
+	defer func() {
+		if r := recover(); r != nil {
+			fmt.Println("changepass panicking with value >>", r)
+		}
+	}()
+
+	isLoggedIn, loginType, logData := CheckIfAlreadyLoggedIn(r, db)
+	if isLoggedIn == false {
+		fmt.Println("No session found, redirecting /dashboard to /login")
+		http.Redirect(w, r, "/login", http.StatusSeeOther)
+		return
+	}
+
+	//handling form submission
+	if r.Method == http.MethodPost {
+
+		data := make(map[string]string, 0)
+		r.ParseForm()
+
+		loginID := mtool.GetMapValue(logData, "login_id")
+		fmt.Println(loginID)
+		r.Form.Add("login_id", loginID)
+
+		isOk := ChangePassword(r, db)
+		var message string
+		if isOk == true {
+			message = "OK"
+			//fmt.Println("Password")
+		} else {
+			message = "ERROR"
+		}
+
+		data["message"] = message
+		//response return to client
+		js, err := json.Marshal(data)
+		if err != nil {
+			fmt.Println("Something wrong @ json.Marshal", err.Error())
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
+
+		w.Header().Set("Content-Type", "application/json")
+		fmt.Fprintln(w, string(js))
+
+	}
+
+	if r.Method == http.MethodGet {
+
+		ptmp, err := template.ParseGlob(adminTemplateAbsPath)
+		if err != nil {
+			fmt.Println(err.Error())
+		}
+
+		pageName := filepath.Join(workingDirectory, "page", "changepass.gohtml")
+		ptmp, err = ptmp.ParseFiles(pageName)
+		if err != nil {
+			fmt.Println(err.Error())
+		}
+
+		data := struct {
+			Title          string
+			LoginType      string
+			Page           string
+			CompanyName    string
+			CompanyWebsite string
+		}{
+			Title:          "ChangePassword",
+			LoginType:      loginType,
+			Page:           r.RequestURI,
+			CompanyName:    mtool.GetMapValue(logData, "company_name"),
+			CompanyWebsite: mtool.GetMapValue(logData, "website"),
+		}
+
+		if err := ptmp.Execute(w, data); err != nil {
+			log.Fatal(err)
+		}
+	}
+
 }
