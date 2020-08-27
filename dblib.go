@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"log"
-	"mateors/mastererp/models"
+	"github.com/mateors/models"
 	"net/url"
 	"reflect"
 	"strconv"

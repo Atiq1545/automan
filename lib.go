@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"mateors/mastererp/models"
+	"github.com/mateors/models"
 	"net/http"
 	"net/url"
 	"strings"

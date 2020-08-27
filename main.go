@@ -14,13 +14,23 @@ import (
 )
 
 var db *mcb.DB
+
+// var bucketName string
+
 var workingDirectory string
 var websiteTemplateAbsPath string
 var adminTemplateAbsPath string
 
+// E:\GOLANG\src\mateors\tutorial\template\basic_template\define\templates\admin\*.gohtml
+// E:\GOLANG\src\mateors\tutorial\template\basic_template\define\templates\admin\*.
+// E:\GOLANG\src\mateors\tutorial\template\basic_template\define\templates\website\*.gohtml
+
+// /var/www/share/html/template/basic_template\define\templates\admin\*.gohtml
+
 func init() {
 
 	workingDirectory, _ = os.Getwd()
+
 	//fmt.Println("workingDirectory:", workingDirectory)
 	adminTemplateAbsPath = filepath.Join(workingDirectory, "templates", "admin", "*.gohtml")
 	//fmt.Println("adminTemplateAbsPath:", adminTemplateAbsPath)
@@ -36,60 +46,34 @@ func init() {
 	}
 	fmt.Println(res, err)
 
+	// companySetup(db)
+
 }
 
 func main() {
 
-	//smux.PathPrefix("/vdata/").Handler(http.StripPrefix("/vdata/", http.FileServer(http.Dir(data_path))))
-
-	dataPath := filepath.Join(workingDirectory, "data")
-	http.Handle("/vdata/", http.StripPrefix("/vdata/", http.FileServer(http.Dir(dataPath))))
-
-	assetPath := filepath.Join(workingDirectory, "assets")
-	http.Handle("/resources/", http.StripPrefix("/resources/", http.FileServer(http.Dir(assetPath))))
+	http.Handle("/resources/", http.StripPrefix("/resources/", http.FileServer(http.Dir("./assets"))))
 
 	http.HandleFunc("/", home)
 	http.HandleFunc("/why", why)
+	http.HandleFunc("/services", services)
+	http.HandleFunc("/request-service", requestService)
+	http.HandleFunc("/buy", buy)
+	http.HandleFunc("/sell", sell)
+	http.HandleFunc("/promotion", promotion)
+	http.HandleFunc("/contact", contact)
+	http.HandleFunc("/about", about)
+	http.HandleFunc("/car-details", carDetails)
+
 	http.HandleFunc("/login", login)
-	http.HandleFunc("/forgot_password", forgetPassword)
+	http.HandleFunc("/forget_password", forgetPassword)
 	http.HandleFunc("/changepass", changepass)
 
 	http.HandleFunc("/dashboard", dashboard)
 
-	// retMap := make(map[string]interface{}, 0)
-
-	// retMap["status"] = 10
-	// retMap["name"] = "Mostain"
-	// retMap["marks"] = 50.89
-	// retMap["ages"] = []string{"10", "20"}
-
-	// for k, v := range retMap {
-
-	// 	xType := ValueType(v)
-	// 	fmt.Println(k, "=", xType)
-	// }
-
-	// fmt.Println(retMap)
+	http.HandleFunc("/test", test)
 
 	http.ListenAndServe(":8080", nil)
-
-	/*
-		fmt.Println()
-		d := "access_name:student,cid:1,company_name:AUTOMAN LTD.,login_id:2,sid:7eafb6b5-d116-4362-82b8-ff8b45252135,account_id:2,account_name:MOSTAIN BILLAH,email:bill.rassel@gmail.com,mobile:01672710028"
-		var key string = "Mos$unAriWusVruR0mBil360"
-
-		hcode := EncodeStr(d, key)
-		fmt.Println(hcode, len(hcode))
-
-		fmt.Println()
-		plaintext := DecodeStr(hcode, key)
-		fmt.Println("Decrypted:", plaintext, len(plaintext))
-
-		fmt.Println()
-		sMap := stringToMap(d)
-		fmt.Println(sMap, len(sMap))
-		fmt.Println(sMap["sid"])
-	*/
 
 }
 
@@ -117,7 +101,6 @@ func home(w http.ResponseWriter, r *http.Request) {
 
 func why(w http.ResponseWriter, r *http.Request) {
 
-	//New("abase.gohtml")
 	ptmp, err := template.ParseGlob(websiteTemplateAbsPath)
 	if err != nil {
 		fmt.Println(err.Error())
@@ -133,8 +116,196 @@ func why(w http.ResponseWriter, r *http.Request) {
 	}{
 		Title: "Why Automan",
 	}
+	ptmp.Execute(w, data)
 
-	//smtp.SendMail()
+}
+
+func services(w http.ResponseWriter, r *http.Request) {
+
+	ptmp, err := template.ParseGlob(websiteTemplateAbsPath)
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	_, err = ptmp.ParseFiles("page/service.gohtml")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	data := struct {
+		Title string
+	}{
+		Title: "Services - AutoMan",
+	}
+	ptmp.Execute(w, data)
+
+}
+
+func requestService(w http.ResponseWriter, r *http.Request) {
+
+	ptmp, err := template.ParseGlob(websiteTemplateAbsPath)
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	_, err = ptmp.ParseFiles("page/request-service.gohtml")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	data := struct {
+		Title string
+	}{
+		Title: "Request Services - AutoMan",
+	}
+	ptmp.Execute(w, data)
+}
+
+func buy(w http.ResponseWriter, r *http.Request) {
+
+	ptmp, err := template.ParseGlob(websiteTemplateAbsPath)
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	_, err = ptmp.ParseFiles("page/buy.gohtml")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	data := struct {
+		Title string
+	}{
+		Title: "Buy - AutoMan",
+	}
+	ptmp.Execute(w, data)
+}
+
+func sell(w http.ResponseWriter, r *http.Request) {
+
+	ptmp, err := template.ParseGlob(websiteTemplateAbsPath)
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	_, err = ptmp.ParseFiles("page/sell.gohtml")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	data := struct {
+		Title string
+	}{
+		Title: "Sell AutoMan",
+	}
+	ptmp.Execute(w, data)
+}
+
+func promotion(w http.ResponseWriter, r *http.Request) {
+
+	ptmp, err := template.ParseGlob(websiteTemplateAbsPath)
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	_, err = ptmp.ParseFiles("page/promotion.gohtml")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	data := struct {
+		Title string
+	}{
+		Title: "Promotion - AutoMan",
+	}
+	ptmp.Execute(w, data)
+
+}
+
+func contact(w http.ResponseWriter, r *http.Request) {
+
+	ptmp, err := template.ParseGlob(websiteTemplateAbsPath)
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	_, err = ptmp.ParseFiles("page/contact.gohtml")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	data := struct {
+		Title string
+	}{
+		Title: "Contact - AutoMan",
+	}
+	ptmp.Execute(w, data)
+
+}
+
+func about(w http.ResponseWriter, r *http.Request) {
+
+	ptmp, err := template.ParseGlob(websiteTemplateAbsPath)
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	_, err = ptmp.ParseFiles("page/about.gohtml")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	data := struct {
+		Title string
+	}{
+		Title: "About - AutoMan",
+	}
+	ptmp.Execute(w, data)
+}
+
+func carDetails(w http.ResponseWriter, r *http.Request) {
+
+	ptmp, err := template.ParseGlob(websiteTemplateAbsPath)
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	_, err = ptmp.ParseFiles("page/car-details.gohtml")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	data := struct {
+		Title string
+	}{
+		Title: "Car Details - AutoMan",
+	}
+	ptmp.Execute(w, data)
+
+}
+
+//for test
+func test(w http.ResponseWriter, r *http.Request) {
+
+	ptmp, err := template.ParseFiles("page/test.gohtml")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	r.ParseForm()
+	fmt.Println("Method:", r.Method)
+
+	if r.Method == "POST" {
+		fmt.Println("form received", r.Form)
+	}
+	// ptmp.Execute(w, Method)
+
+	data := struct {
+		Title string
+	}{
+		Title: "Test",
+	}
+
 	ptmp.Execute(w, data)
 
 }
@@ -150,9 +321,10 @@ func login(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("Method:", r.Method)
 
 	if r.Method == "POST" {
+		// fmt.Println("Form Received", r.Form)
 
-		//fmt.Println("form received", r.Form)
-		//method 1 to catch html form value
+		// method 1 to catch html form vlue
+
 		username := r.FormValue("username")
 		password := r.FormValue("password")
 		geolocation := r.FormValue("geolocation")
@@ -169,14 +341,13 @@ func login(w http.ResponseWriter, r *http.Request) {
 		fmt.Println("screen_size:", screenSize)
 		fmt.Println("Battery:", battery)
 
-		//fmt.Println()
 		fmt.Println()
 
 		Login(r, w, db)
+		//method 2 to catch html form value
 
-		//Mthod 2 /Advance way to catch html form value map[string][]string
 		// for key, valA := range r.Form {
-		// 	fmt.Println(key, valA[0])
+		// 	fmt.Println(key, valA)
 		// }
 
 	}
@@ -188,10 +359,7 @@ func login(w http.ResponseWriter, r *http.Request) {
 		Title:      "Login",
 		LoginError: "",
 	}
-
-	//smtp.SendMail()
 	ptmp.Execute(w, data)
-
 }
 
 func forgetPassword(w http.ResponseWriter, r *http.Request) {
@@ -205,13 +373,10 @@ func forgetPassword(w http.ResponseWriter, r *http.Request) {
 		Title      string
 		LoginError string
 	}{
-		Title:      "Login",
+		Title:      "Forget Password",
 		LoginError: "",
 	}
-
-	//smtp.SendMail()
 	ptmp.Execute(w, data)
-
 }
 
 func dashboard(w http.ResponseWriter, r *http.Request) {
