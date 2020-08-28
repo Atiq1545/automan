@@ -10,6 +10,7 @@ import (
 	"path/filepath"
 
 	"github.com/mateors/mcb"
+	"github.com/mateors/models"
 	"github.com/mateors/mtool"
 )
 
@@ -46,7 +47,7 @@ func init() {
 	}
 	fmt.Println(res, err)
 
-	// companySetup(db)
+	companySetup(db)
 
 }
 
@@ -292,13 +293,39 @@ func test(w http.ResponseWriter, r *http.Request) {
 		fmt.Println(err.Error())
 	}
 
+	type Account struct {
+		FirstName string
+		LastName  string
+		Email     string
+	}
+
 	r.ParseForm()
 	fmt.Println("Method:", r.Method)
 
 	if r.Method == "POST" {
-		fmt.Println("form received", r.Form)
+
+		FirstName := r.FormValue("first_name")
+		LastName := r.FormValue("last_name")
+		Email := r.FormValue("email")
+
+		fmt.Println("first_name:", FirstName)
+		fmt.Println("last_name:", LastName)
+		fmt.Println("email:", Email)
+
 	}
-	// ptmp.Execute(w, Method)
+
+	// var myData Account
+
+	// form := make(url.Values, 0)
+
+	// p := db.Insert(form, &myData) //pass by reference (&myData)
+	// fmt.Println("Status:", p.Status)
+
+	var a models.Account
+	docID := "account::1"
+
+	pRes := db.InsertIntoBucket(docID, BucketName, a)
+	fmt.Println("Company:", pRes.Status)
 
 	data := struct {
 		Title string
